@@ -28,6 +28,8 @@ do
    gzip -d *.cov.gz
    sed -i s/$oldname/$newname/g *.cov)
   echo done while "$i"
+  #test
+  #gzip -cd $covfile | sed s/$oldname/$newname/g | gzip > "$result"/new"$covfile"
   i=$(( $i + 1 ))
 done
 
